@@ -1,4 +1,4 @@
-import React, {useEffect, useImperativeHandle} from 'react'
+import React, {useEffect, useImperativeHandle, useRef} from 'react'
 
 const TestCom = React.forwardRef((props, ref) => {
     useEffect(() => {
@@ -26,4 +26,16 @@ const TestCom = React.forwardRef((props, ref) => {
     )
 })
 
-export default TestCom
+const Test = () => {
+    const ref = useRef(null)
+    return (
+        <div>
+            <TestCom
+                ref={(TestComRef) => {
+                    console.log(ref)
+                    ref.current = TestComRef
+                }}
+            />
+        </div>
+    )
+}
