@@ -12,7 +12,7 @@ function strToArray(value, obj, keys) {
     let current = obj;
     keys.forEach((key, index) => {
         if (!current[key]) {
-            current[key] = index === keys.length - 1 ? {[key]: value} : []
+            current[key] = index === keys.length - 1 ? { [key]: value } : []
         }
         current = current[key]
     })
