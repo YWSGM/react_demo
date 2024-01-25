@@ -1,12 +1,12 @@
-///*
-// getType(123) // number
-// getType(undefined) // undefined
-// getType(null) // null
-// getType(() => {}) // function
-// getType({}) // object
-// getType([]) // array
-// getType(new Date()) // date
-// */
+/*
+getType(123) // number
+getType(undefined) // undefined
+getType(null) // null
+getType(() => {}) function
+getType({}) // object
+getType([]) // array
+getType(new Date()) // date
+*/
 const getType = (param) => {
     if (param === null) return 'undefined'
     if (typeof param === 'undefined') return 'undefined'
